@@ -9,34 +9,63 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
 
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/assets/scripts/hamburger.js"></script>
+
     </head>
-    <body>
+    <body class="{{ page.class }}">
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+      <header>
+        <div class="container" id="logo-lockup">
+          <nav id="nav" class="hidden-sm hidden-xs pull-right">
+            {% include nav.html %}
+          </nav>
+          <img src="/assets/images/2015-austrade-logo-v2.png" alt="">
+        </div>
+      </header>
+      <div class="bg-grey w100">
+        <div class="container p1530">
+          <h1 class="m0">{{ page.title }}</h1>
+        </div>
+      </div>
+      <div class="bg-white w100">
+        <div class="container p1530">
+          breadcrumbs
+        </div>
+      </div>
+
+      <div id="central-content" class="container">
+        <div class="row">
+          <div class="col-sm-3 mv15">
+            <div class="subnav-toggle hidden-sm hidden-md hidden-lg">
+              {{ page.title }}
+            </div>
+            {% if page.section == "tenure" %}
+            {% include nav-tenure.html %}
+            {% elsif page.section == "ntitle" %}
+            {% include nav-title.html %}
+            {% elsif page.section == "engage" %}
+            {% include nav-engage.html %}
+            {% elsif page.section == "contact" %}
+            {% include nav-contact.html %}
+            {% endif %}
           </div>
-
-          {{ content }}
-
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name is<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
+          <div class="col-sm-9">
+            {{ content }}
           </div>
         </div>
+      </div>
+
+      <div id="hamburger" class="hidden-md hidden-lg">
+        <i class="glyphicon glyphicon-align-justify" id="hamburger-toggle"></i>
+        <div id="hamburger-container">
+          <nav id="navburger">
+            {% include nav.html %}
+          </nav>
+        </div>
+      </div>
+
+      {% include footer.html %}
 
     </body>
 </html>

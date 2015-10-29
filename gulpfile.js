@@ -2,11 +2,23 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+var notify      = require("gulp-notify") ;
 var cp          = require('child_process');
+var bower       = require('gulp-bower');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
+
+var config = {
+     sassPath: './resources/sass',
+     bowerDir: './bower_components' 
+}
+
+gulp.task('bower', function() { 
+    return bower()
+         .pipe(gulp.dest(config.bowerDir)) 
+});
 
 /**
  * Build the Jekyll Site
@@ -35,6 +47,11 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     });
 });
 
+gulp.task('icons', function() { 
+    return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*') 
+        .pipe(gulp.dest('./public/fonts')); 
+});
+
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
@@ -50,6 +67,8 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('css'));
 });
 
+
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -63,4 +82,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'sass']);
