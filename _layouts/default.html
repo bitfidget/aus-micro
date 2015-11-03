@@ -17,22 +17,26 @@
 
       <header>
         <div class="container" id="logo-lockup">
-          <nav id="nav" class="hidden-sm hidden-xs pull-right">
+          <nav class="main-nav hidden-sm hidden-xs pull-right">
             {% include nav.html %}
           </nav>
           <img src="/assets/images/2015-austrade-logo-v2.png" alt="">
         </div>
       </header>
+
+      <div id="bg-image">
+      </div>
+      
       <div class="bg-grey w100">
         <div class="container p1530">
           <h1 class="m0">{{ page.title }}</h1>
         </div>
       </div>
-      <div class="bg-white w100">
+<!--       <div class="bg-white w100">
         <div class="container p1530">
           breadcrumbs
         </div>
-      </div>
+      </div> -->
 
       <div id="central-content" class="container">
         <div class="row">
@@ -59,7 +63,7 @@
       <div id="hamburger" class="hidden-md hidden-lg">
         <i class="glyphicon glyphicon-align-justify" id="hamburger-toggle"></i>
         <div id="hamburger-container">
-          <nav id="navburger">
+          <nav class="main-nav navburger">
             {% include nav.html %}
           </nav>
         </div>
