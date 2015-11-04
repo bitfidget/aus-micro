@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600);
 /*****************************************************************************/
 /*
 /* Common
@@ -5352,6 +5353,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/* font imports */
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url(../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot);
@@ -5359,30 +5361,6 @@ button.close {
   src: url(../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf);
   src: url(../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff);
   src: url(../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2); }
-
-@font-face {
-  font-family: 'body-reg';
-  src: url(/assets/fonts/Unlimited-Sans-Regular.otf); }
-
-@font-face {
-  font-family: 'body-light';
-  src: url(/assets/fonts/Unlimited-Sans-Light.otf); }
-
-@font-face {
-  font-family: 'body-bold';
-  src: url(/assets/fonts/Unlimited-Sans-Bold.otf); }
-
-@font-face {
-  font-family: 'head-reg';
-  src: url(/assets/fonts/Unlimited-Pro-Regular.otf); }
-
-@font-face {
-  font-family: 'head-light';
-  src: url(/assets/fonts/Unlimited-Pro-Light.otf); }
-
-@font-face {
-  font-family: 'head-bold';
-  src: url(/assets/fonts/Unlimited-Pro-Medium.otf); }
 
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -7311,14 +7289,24 @@ button.close {
 .fa-fonticons:before {
   content: "\f280"; }
 
+/* variables */
+/* main/generics */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  position: relative;
+  background: #d7d2cb; }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: head-bold, arial, sans-serif; }
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700; }
 
 h3, h4, h5, h6 {
-  font-family: head-reg, arial, sans-serif; }
+  font-weight: 600; }
 
 nav a {
-  font-family: head-reg, arial, sans-serif; }
+  font-weight: 600; }
 
 h1:first-child {
   margin: 0 0 0.4em; }
@@ -7336,6 +7324,10 @@ a {
   color: #236a8d;
   text-decoration: underline; }
 
+a.anchor {
+  float: right;
+  height: 0; }
+
 nav a {
   text-decoration: none; }
 
@@ -7346,22 +7338,24 @@ a:hover {
 a:visited {
   color: #3d3935; }
 
-.btn {
-  transition: all ease 0.3s; }
+a.btn {
+  transition: all ease 0.3s;
+  text-decoration: none;
+  color: #3d3935; }
 
-.btn:hover, .btn-default:hover, .btn-primary:hover {
+a.btn:hover, a.btn-default:hover, a.btn-primary:hover {
   color: #FFF !important;
   background: #3d3935 !important; }
 
 header {
   background: #FFF;
   width: 100%;
-  height: 140px;
+  height: 150px;
   display: block; }
   header img {
     display: block;
-    max-height: 60px;
-    margin: 30px 15px; }
+    max-height: 80px;
+    margin: 35px 15px; }
     @media (max-width: 480px) {
       header img {
         margin: 0 auto; } }
@@ -7372,7 +7366,7 @@ header {
   height: 430px;
   background-color: rgba(61, 57, 53, 0.5);
   position: absolute;
-  top: 140px;
+  top: 150px;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position-x: center;
@@ -7382,52 +7376,111 @@ header {
     #bg-image {
       background-image: url(/assets/background/wide-home.jpg); } }
 
+.future-acts #bg-image {
+  background-image: url(/assets/background/future-acts.jpg); }
+  @media (min-width: 1200px) {
+    .future-acts #bg-image {
+      background-image: url(/assets/background/wide-future-acts.jpg); } }
+
+.land-tenure #bg-image {
+  background-image: url(/assets/background/land-tenure.jpg); }
+  @media (min-width: 1200px) {
+    .land-tenure #bg-image {
+      background-image: url(/assets/background/wide-land-tenure.jpg); } }
+
 .reserves #bg-image {
   background-image: url(/assets/background/reserves.jpg); }
+  @media (min-width: 1200px) {
+    .reserves #bg-image {
+      background-image: url(/assets/background/wide-reserves.jpg); } }
 
 .tenure.main #bg-image {
-  background-image: url(/assets/background/reserves.jpg); }
+  background-image: url(/assets/background/land-tenure.jpg); }
+  @media (min-width: 1200px) {
+    .tenure.main #bg-image {
+      background-image: url(/assets/background/wide-land-tenure.jpg); } }
 
 .ntitle.main #bg-image {
   background-image: url(/assets/background/native-title.jpg); }
+  @media (min-width: 1200px) {
+    .ntitle.main #bg-image {
+      background-image: url(/assets/background/wide-native-title.jpg); } }
 
 .sacred-sites #bg-image {
   background-image: url(/assets/background/sacred-sites.jpg); }
+  @media (min-width: 1200px) {
+    .sacred-sites #bg-image {
+      background-image: url(/assets/background/wide-sacred-sites.jpg); } }
 
 .freehold-land #bg-image {
   background-image: url(/assets/background/freehold.jpg); }
+  @media (min-width: 1200px) {
+    .freehold-land #bg-image {
+      background-image: url(/assets/background/wide-freehold.jpg); } }
 
 .aboriginal-freehold-land #bg-image {
   background-image: url(/assets/background/aboriginal-freehold.jpg); }
+  @media (min-width: 1200px) {
+    .aboriginal-freehold-land #bg-image {
+      background-image: url(/assets/background/wide-aboriginal-freehold.jpg); } }
 
 .leasehold-land #bg-image {
   background-image: url(/assets/background/leasehold.jpg); }
+  @media (min-width: 1200px) {
+    .leasehold-land #bg-image {
+      background-image: url(/assets/background/wide-leasehold.jpg); } }
 
 .crown-land #bg-image {
   background-image: url(/assets/background/crown-land.jpg); }
+  @media (min-width: 1200px) {
+    .crown-land #bg-image {
+      background-image: url(/assets/background/wide-crown-land.jpg); } }
 
 .pastoral-leases #bg-image {
   background-image: url(/assets/background/pastoral.jpg); }
+  @media (min-width: 1200px) {
+    .pastoral-leases #bg-image {
+      background-image: url(/assets/background/wide-pastoral.jpg); } }
+
+.engage #bg-image {
+  background-image: url(/assets/background/engage.jpg); }
+  @media (min-width: 1200px) {
+    .engage #bg-image {
+      background-image: url(/assets/background/wide-engage.jpg); } }
 
 .land-councils #bg-image {
   background-image: url(/assets/background/engagement.jpg); }
+  @media (min-width: 1200px) {
+    .land-councils #bg-image {
+      background-image: url(/assets/background/wide-engagement.jpg); } }
 
 .northern-territory #bg-image {
   background-image: url(/assets/background/engage-nt.jpg); }
+  @media (min-width: 1200px) {
+    .northern-territory #bg-image {
+      background-image: url(/assets/background/wide-engage-nt.jpg); } }
 
 .key-terms #bg-image {
-  background-image: url(/assets/background/engage.jpg); }
+  background-image: url(/assets/background/definitions.jpg); }
+  @media (min-width: 1200px) {
+    .key-terms #bg-image {
+      background-image: url(/assets/background/wide-definitions.jpg); } }
+
+.tribunal #bg-image {
+  background-image: url(/assets/background/role.jpg); }
+  @media (min-width: 1200px) {
+    .tribunal #bg-image {
+      background-image: url(/assets/background/wide-role.jpg); } }
+
+.nt #bg-image {
+  background-image: url(/assets/background/role-nt.jpg); }
+  @media (min-width: 1200px) {
+    .nt #bg-image {
+      background-image: url(/assets/background/wide-role-nt.jpg); } }
 
 @media (max-width: 480px) {
   #bg-image {
     background: none !important; } }
-
-body {
-  font-family: body-reg, arial, sans-serif;
-  text-align: left;
-  position: relative;
-  background: #d7d2cb; }
-  @media (min-width: 768px) { }
 
 @media (max-width: 1200px) {
   .container {
@@ -7437,8 +7490,8 @@ img {
   max-width: 100%; }
 
 strong {
-  font-family: body-bold, arial, sans-serif;
-  font-weight: normal; }
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700; }
 
 #central-content {
   padding: 15px 30px; }
@@ -7487,9 +7540,10 @@ strong {
   border-radius: 0;
   padding: 10px 25px; }
 
-/* naviagtions */
+/* NAV COLOURS */
 .clr-home, .clr-home a {
-  background: #ffab00; }
+  background: #ffab00;
+  color: #000; }
 
 .main-nav .clr-home a .circle {
   background: rgba(255, 255, 255, 0.5) url(/assets/images/icon-home.svg) no-repeat;
@@ -7524,34 +7578,36 @@ strong {
   background-size: cover; }
 
 .tenure nav.main-nav .clr-tenure a, .ntitle nav.main-nav .clr-title a, .engage nav.main-nav .clr-engage a, .contact nav.main-nav .clr-contact a {
-  height: 150px !important; }
+  height: 150px; }
   .tenure nav.main-nav .clr-tenure a .circle, .ntitle nav.main-nav .clr-title a .circle, .engage nav.main-nav .clr-engage a .circle, .contact nav.main-nav .clr-contact a .circle {
     background-color: #FFF !important; }
   .tenure nav.main-nav .clr-tenure a span, .ntitle nav.main-nav .clr-title a span, .engage nav.main-nav .clr-engage a span, .contact nav.main-nav .clr-contact a span {
     margin-top: 5px; }
 
+/* MAIN NAV */
 nav.main-nav {
-  font-size: 16px;
-  color: #000;
+  font-size: 17px;
+  font-weight: 600;
+  color: #FFF;
   display: block;
   margin: 0 -15px; }
   nav.main-nav ul, nav.main-nav li {
     margin: 0;
     padding: 0;
     display: block;
-    height: 140px; }
+    height: 150px; }
   nav.main-nav li {
     display: block;
     vertical-align: top;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     float: left;
     position: relative; }
     nav.main-nav li a {
       display: block;
-      width: 140px;
-      height: 140px;
-      color: #000;
+      width: 150px;
+      height: 150px;
+      color: #FFF;
       text-align: center;
       position: absolute;
       transition: all ease 0.3s; }
@@ -7565,8 +7621,13 @@ nav.main-nav {
         transition: all ease 0.3s; }
       nav.main-nav li a span {
         display: block;
-        padding: 0 10px;
-        transition: margin ease 0.3s; }
+        padding: 3px 10px;
+        transition: all ease 0.3s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px; }
     nav.main-nav li a:visited {
       color: #FFF; }
     nav.main-nav li a:hover {
@@ -7580,13 +7641,14 @@ nav.main-nav {
         height: 80px;
         background-color: white;
         border-radius: 50%;
-        margin: 0px auto; }
+        margin: 10px auto; }
       nav.main-nav li a:hover span {
-        margin-top: 5px; }
-  nav.main-nav li.current a {
-    color: #000; }
+        margin-top: 10px;
+        color: #3d3935; }
+  nav.main-nav li.current a span, nav.main-nav li.current a:visited span {
+    color: #3d3935 !important; }
 
-/* hamnburger specific */
+/* HAMBURGER specific */
 #hamburger {
   position: absolute;
   top: 10px;
@@ -7623,6 +7685,7 @@ nav.main-nav {
     margin-left: 100px;
     margin-top: 40px; }
 
+/* HAMBURGER */
 nav.navburger ul, nav.navburger li {
   margin: 0;
   padding: 0;
@@ -7667,9 +7730,11 @@ nav.navburger li {
 nav.navburger li.current a {
   color: #000; }
 
+/* SUBNAV */
 nav.subnav {
-  font-family: 'body-bold' !important;
-  font-size: 18px; }
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px; }
   @media (max-width: 768px) {
     nav.subnav {
       height: 0px;
@@ -7687,18 +7752,15 @@ nav.subnav {
   nav.subnav a {
     color: #FFF;
     display: block;
-    padding: 5px 20px 5px 10px;
+    padding: 5px 25px 5px 10px;
     position: relative;
     transition: all ease 0.3s; }
   nav.subnav a:after {
     content: "\e080";
     font-family: "Glyphicons Halflings";
     position: absolute;
-    line-height: 20px;
-    font-size: 16px;
-    right: 0;
     top: 5px;
-    margin: 0 5px; }
+    right: 5px; }
   nav.subnav a:hover {
     margin-left: 10px;
     margin-right: -10px;
@@ -7708,6 +7770,9 @@ nav.subnav.toggled {
   height: auto !important; }
 
 .subnav-toggle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
   color: #FFF;
   display: block;
   padding: 5px 10px;
@@ -7722,21 +7787,19 @@ nav.subnav.toggled {
   font-size: 18px;
   right: 0;
   top: 5px;
-  margin: 0 5px; }
+  margin: -50% 5px;
+  height: 100%; }
 
-.main nav.subnav .main a, .future-acts nav.subnav .future-acts a, .reserves nav.subnav .reserves a, .sacred-sites nav.subnav .sacred-sites a, .freehold-land nav.subnav .freehold-land a, .aboriginal-freehold-land nav.subnav .aboriginal-freehold-land a, .leasehold-land nav.subnav .leasehold-land a, .crown-land nav.subnav .crown-land a, .pastoral-leases nav.subnav .pastoral-leases a, .land-councils nav.subnav .land-councils a, .northern-territory nav.subnav .northern-territory a, .key-terms nav.subnav .key-terms a {
+/* SUBNAV - stickies */
+.main nav.subnav .main a, .future-acts nav.subnav .future-acts a, .reserves nav.subnav .reserves a, .sacred-sites nav.subnav .sacred-sites a, .freehold-land nav.subnav .freehold-land a, .aboriginal-freehold-land nav.subnav .aboriginal-freehold-land a, .leasehold-land nav.subnav .leasehold-land a, .crown-land nav.subnav .crown-land a, .pastoral-leases nav.subnav .pastoral-leases a, .land-councils nav.subnav .land-councils a, .northern-territory nav.subnav .northern-territory a, .nt nav.subnav .nt a, .tribunal nav.subnav .tribunal a, .key-terms nav.subnav .key-terms a {
   margin-left: 10px;
-  margin-right: -10px; }
+  margin-right: -10px;
+  background: #3d3935; }
   @media (max-width: 768px) {
-    .main nav.subnav .main a, .future-acts nav.subnav .future-acts a, .reserves nav.subnav .reserves a, .sacred-sites nav.subnav .sacred-sites a, .freehold-land nav.subnav .freehold-land a, .aboriginal-freehold-land nav.subnav .aboriginal-freehold-land a, .leasehold-land nav.subnav .leasehold-land a, .crown-land nav.subnav .crown-land a, .pastoral-leases nav.subnav .pastoral-leases a, .land-councils nav.subnav .land-councils a, .northern-territory nav.subnav .northern-territory a, .key-terms nav.subnav .key-terms a {
+    .main nav.subnav .main a, .future-acts nav.subnav .future-acts a, .reserves nav.subnav .reserves a, .sacred-sites nav.subnav .sacred-sites a, .freehold-land nav.subnav .freehold-land a, .aboriginal-freehold-land nav.subnav .aboriginal-freehold-land a, .leasehold-land nav.subnav .leasehold-land a, .crown-land nav.subnav .crown-land a, .pastoral-leases nav.subnav .pastoral-leases a, .land-councils nav.subnav .land-councils a, .northern-territory nav.subnav .northern-territory a, .nt nav.subnav .nt a, .tribunal nav.subnav .tribunal a, .key-terms nav.subnav .key-terms a {
       margin: 0; } }
 
-.main nav.subnav .main a:after, .future-acts nav.subnav .future-acts a:after, .reserves nav.subnav .reserves a:after, .sacred-sites nav.subnav .sacred-sites a:after, .freehold-land nav.subnav .freehold-land a:after, .aboriginal-freehold-land nav.subnav .aboriginal-freehold-land a:after, .leasehold-land nav.subnav .leasehold-land a:after, .crown-land nav.subnav .crown-land a:after, .pastoral-leases nav.subnav .pastoral-leases a:after, .land-councils nav.subnav .land-councils a:after, .northern-territory nav.subnav .northern-territory a:after, .key-terms nav.subnav .key-terms a:after {
-  content: ""; }
-
-.future-acts nav.subnav .future-acts a:after, .reserves nav.subnav .reserves a:after, .sacred-sites nav.subnav .sacred-sites a:after {
-  content: ""; }
-
+/* FOOTER */
 footer {
   padding: 30px 0 80px; }
   footer a {

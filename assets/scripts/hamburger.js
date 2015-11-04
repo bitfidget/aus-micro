@@ -10,4 +10,8 @@ $(document).ready(function() {
 		$('nav.subnav').toggleClass('toggled');
 	});
 
+	var thisHeight = $(window).innerHeight() - 300;
+
+	$('#central-content').css('min-height', thisHeight );
+
 });
