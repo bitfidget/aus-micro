@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width">
 
         <meta name="title" content="Investors' guide to land tenure in northern Australia">
-        <meta name="description" content="This website is an Investors' guide to land tenure in northern Australia Provideand shortprovides abstractinformation of the website about what land tenure is and how to engage with Traditional Owners.">
-        <meta name="keywords" content="Land Tenure, Foreign Investment, Northern Australia, Engaging with Traditional Owners">
+        <meta name="description" content="This is the first edition of a general guide to land tenure arrangements in northern Australia. It also provides a guide to tenure and native title in northern Australia. The guide will be developed over the next three years as part of the Government’s commitment in the White Paper on Developing Northern Australia to provide more business friendly information on the different land tenure arrangements to increase the appeal of investing in the north.">
+        <meta name="keywords" content="Native title, land tenure, engaging with traditional owners, northern Australia, economic development, investor guide, investment in northern Australia, land in northern Australia, aboriginal land, Indigenous, land councils, land rights, investing in land, northern Australia investing, Northern Territory">
         <meta name="author" content="PricewaterhouseCoopers">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -34,8 +34,8 @@
       <div id="central-content" class="container">
         
         <div class="row">
-          <div class="col-sm-5 bg-grey p30 m15">
-            <h1 class="first">Land tenure and native title in northern Australia</h1>
+          <div class="col-sm-6 bg-grey p30 m15">
+            <h1 class="first">{{ page.title }}</h1>
           </div>
         </div>
 
@@ -49,41 +49,56 @@
 
         <div class="row">
           <div class="col-sm-6">
+
+            <div class="bg-white p30 mv15">
+              <h2 class="first">Introduction</h2>
+              <p>This is the first edition of a general guide to land tenure arrangements in northern Australia. It also provides a guide to tenure and native title that might apply to any one geographical location in northern Australia. The guide will be developed over the next three years as part of the Government’s commitment in the White Paper on Developing Northern Australia to provide more business friendly information on the different land tenure arrangements to increase the appeal of investing in the north.</p>
+            </div>
+
             <div class="bg-wheat p30 mv15">
               <h2 class="first">What is land tenure?</h2>
               <p>Land in northern Australia is held and occupied under many different land tenure types.</p>
               <p>Discover how land is held, what each tenure type means and examples of commercial activities conducted on different land tenures within northern Australia. </p>
               <a class="btn btn-primary" href="/land-tenure/">Guide to land tenure</a>
             </div>
-            <div class="bg-snow p30 mv15">
-              <h2 class="first">What is native title?</h2>
-              <p>Native Title can exist over certain land tenures and can impact the use of land. Many traditional owners have expressed a desire to be involved in and benefit from development on their land.</p>
-              <p>Find out more about Native Title, how it applies to land within northern Australia and how to engage with Traditional Owners.</p>
-              <a class="btn btn-primary" href="/native-title/">Guide to native title</a>
-            </div>
+            
           </div>
           
           <div class="col-sm-6">
-            <div class="bg-white p30 mv15">
-              <h2 class="first">Interested in investing in northern Australia?</h2>
-              <p>Use the interactive map to find land for:</p>
-              <ul>
-                <li>Agriculture</li> 
-                <li>Mining</li>
-                <li>Infrastructure</li>
-                <li>Horticulture</li>
-                <li>Tourism</li>
-              </ul>
-              <a class="btn btn-primary" href="">Find land types</a>
+
+            <div class="bg-snow p30 mv15">
+              <h2 class="first">What is native title?</h2>
+              <p>Native title can exist over certain land tenures and can impact the use of land. Many traditional owners have expressed a desire to be involved in and benefit from development on their land.</p>
+              <p>Find out more about native title, how it applies to land within northern Australia and how to engage with traditional owners.</p>
+              <a class="btn btn-primary" href="/native-title/">Guide to Native Title</a>
             </div>
+
+            <div class="bg-white p30 mv15">
+              <h2 class="first">Find types of land tenure and title in northern Australia</h2>
+              <p>Discover more about the location of land tenure systems and Native Title holdings, along with topographical and infrastructure information.</p>
+              <div>
+                <a  href="http://northernaustralia.nationalmap.nicta.com.au" target="_blank" class="btn-external">
+                  <div class="circle">
+                  </div>
+                  <span>
+                    Explore northern Australia
+                  </span>
+                </a>
+              </div>
+            </div>
+            
           </div>
         </div>
 
       </div>
 
       <div id="hamburger" class="hidden-md hidden-lg">
-        <i class="glyphicon glyphicon-align-justify" id="hamburger-toggle"></i>
+        <div id="hamburger-toggle">
+          <i class="glyphicon glyphicon-align-justify"></i>
+          Menu
+        </div>
         <div id="hamburger-container">
+          <div class="hamburger-close"><i class="glyphicon glyphicon-remove-sign"></i> close menu</div>
           <nav class="main-nav navburger">
             {% include nav.html %}
           </nav>

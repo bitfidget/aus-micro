@@ -84,12 +84,11 @@ nav a{
 }
 
 a:hover{
-	color: rgb(88,45,64);
 	text-decoration: none;
 }
 
 a:visited{
-	color: $grey;
+	color: rgb(88, 45, 64);
 }
 
 a.btn{
@@ -105,6 +104,79 @@ a.btn-primary:hover{
 	background: $grey !important;
 }
 
+a.btn-external{
+	display: table;
+	position: relative;
+	background: rgb(255,171,0);
+	color: $grey !important;
+	min-height: 60px;
+	text-decoration: none !important;
+	cursor: pointer;
+	transition: all ease .3s;
+	.circle{
+		background: rgba(255,255,255,0.5) url(/assets/images/icon-map.svg) no-repeat;
+		display: block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		transition: all ease .3s;
+		margin: 10px;
+		float: left;
+		@media (max-width: $screen-md-min) {
+			display: none;
+		}
+		@media (max-width: $screen-md-min) {
+			display: block;
+		}
+	}
+	span{
+		display: block;
+		padding: 0 10px;
+		max-width: 200px;
+		display: table-cell;
+  	vertical-align: middle;
+  	align: left;
+  	text-align: left;
+	}
+	span:after{
+		content:"\e164";
+		font-family:"Glyphicons Halflings";
+	  margin-left: 5px;
+	  margin-right: 15px;
+	  font-size: 10px;
+	}
+}
+
+.btn-side a.btn-external{
+	width: 100%;
+	@media (max-width: $screen-lg-min) {
+		.circle{
+			display: none;
+		}
+		span{
+			@media (max-width: $screen-lg-min) {
+				margin-left: 20px;
+			}
+		}
+	}
+	@media (max-width: $screen-sm-min) {
+		.circle{
+			display: block;
+		}
+	}
+}
+
+a.btn-external:hover{
+	background: rgba(245,245,245,1) !important;
+	color: $grey! important;
+	.circle{
+		background-color: rgba(255,255,255,0) !important;
+		margin: 0;
+		width: 60px;
+		height: 60px;
+	}
+}
+
 header{
 	background: #FFF;
 	width: 100%;
@@ -112,8 +184,9 @@ header{
 	display: block;
 
 	img{
-		@media (max-width: $screen-xs-min) {
-	    margin: 0 auto;
+		@media (max-width: $screen-sm-min) {
+	    margin: 40px 0;
+	    max-height: 70px;
 	  }
 		display: block;
 		max-height: 80px;
@@ -129,7 +202,7 @@ header{
 	position: absolute;
 	top: $navheight;
 	background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   background-position-x: center;
   background-image: url(/assets/background/home.jpg);
   z-index: -1;
@@ -140,7 +213,7 @@ header{
 
 
 
-.future-acts #bg-image{
+.indigenous-land-use-agreements #bg-image{
 	background-image: url(/assets/background/future-acts.jpg);
 	@media (min-width: $screen-lg-min) {
 	  background-image: url(/assets/background/wide-future-acts.jpg);
@@ -171,7 +244,7 @@ header{
 	  background-image: url(/assets/background/wide-native-title.jpg);
   }
 }
-.sacred-sites #bg-image{
+.sacred-and-heritage-sites #bg-image{
 	background-image: url(/assets/background/sacred-sites.jpg);
 	@media (min-width: $screen-lg-min) {
 	  background-image: url(/assets/background/wide-sacred-sites.jpg);
@@ -183,7 +256,7 @@ header{
 	  background-image: url(/assets/background/wide-freehold.jpg);
   }
 }
-.aboriginal-freehold-land #bg-image{
+.aboriginal-and-torres-strait-islander-land #bg-image{
 	background-image: url(/assets/background/aboriginal-freehold.jpg);
 	@media (min-width: $screen-lg-min) {
 	  background-image: url(/assets/background/wide-aboriginal-freehold.jpg);
@@ -241,6 +314,38 @@ header{
 	background-image: url(/assets/background/role-nt.jpg);
 	@media (min-width: $screen-lg-min) {
 	  background-image: url(/assets/background/wide-role-nt.jpg);
+  }
+}
+
+
+.qld #bg-image{
+	background-image: url(/assets/background/native-title-queensland.jpg);
+	@media (min-width: $screen-lg-min) {
+	  background-image: url(/assets/background/wide-native-title-queensland.jpg);
+  }
+}
+.queensland #bg-image{
+	background-image: url(/assets/background/queensland-information.jpg);
+	@media (min-width: $screen-lg-min) {
+	  background-image: url(/assets/background/wide-queensland-information.jpg);
+  }
+}
+.wa #bg-image{
+	background-image: url(/assets/background/native-title-wa.jpg);
+	@media (min-width: $screen-lg-min) {
+	  background-image: url(/assets/background/wide-native-title-wa.jpg);
+  }
+}
+.western-australia #bg-image{
+	background-image: url(/assets/background/wa-information.jpg);
+	@media (min-width: $screen-lg-min) {
+	  background-image: url(/assets/background/wide-wa-information.jpg);
+  }
+}
+.mining-and-mineral-exploration-leases #bg-image{
+	background-image: url(/assets/background/mining.jpg);
+	@media (min-width: $screen-lg-min) {
+	  background-image: url(/assets/background/wide-mining.jpg);
   }
 }
 
@@ -494,6 +599,18 @@ nav.main-nav{
 	right: 10px;
 }
 
+#hamburger-toggle{
+	i{
+		font-size: 40px;
+		display: block;
+		padding-bottom: 5px;
+	}
+	color: $grey;
+	text-align: center;
+	font-size: 18px;
+	cursor: pointer;
+}
+
 #hamburger-container{
 	position: fixed;
 	display: block;
@@ -537,6 +654,17 @@ nav.main-nav{
 	}
 }
 
+.hamburger-close{
+	display: block;
+	width: 100%;
+	height: 150px;
+	background: $grey;
+	color: #FFF;
+	padding: 20px;
+	cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
 
 
 /* HAMBURGER */
@@ -632,16 +760,24 @@ nav.subnav{
 		transition: all ease .3s;
 	}
 	a:after{
-		content:"\e080";
-	  font-family:"Glyphicons Halflings";
-	  position: absolute;
-	  top: 5px;
-	  right: 5px;
+		@media (min-width: $screen-sm-min) {
+		  content:"\e080";
+		  font-family:"Glyphicons Halflings";
+		  position: absolute;
+		  top: 5px;
+		  right: 5px;
+		}	
 	}
 	a:hover{
-		margin-left: 10px;
-		margin-right: -10px;
+		@media (min-width: $screen-sm-min) {
+		  margin-left: 10px;
+			margin-right: -10px;
+		}
 		text-decoration: none;
+		@media (max-width: $screen-sm-min) {
+		  margin-left: 10px;
+			margin-right: 10px;
+		}
 	}
 }
 
@@ -658,6 +794,7 @@ nav.subnav.toggled{
 	padding: 5px 10px;
 	position: relative;
 	margin-bottom: 2px;
+	cursor: pointer;
 }
 
 .subnav-toggle:after{
@@ -666,10 +803,8 @@ nav.subnav.toggled{
   position: absolute;
   line-height: 20px;
   font-size: 18px;
-  right: 0;
-  top: 5px;
-  margin: -50% 5px;
-  height: 100%;
+  right: 5px;
+  top: 6px;
 }
 
 
@@ -678,19 +813,24 @@ nav.subnav.toggled{
 
 .main nav.subnav .main a,
 
-.future-acts nav.subnav .future-acts a,
+.indigenous-land-use-agreements nav.subnav .indigenous-land-use-agreements a,
 .reserves nav.subnav .reserves a,
-.sacred-sites nav.subnav .sacred-sites a,
+.sacred-and-heritage-sites nav.subnav .sacred-and-heritage-sites a,
 
 .freehold-land nav.subnav .freehold-land a,
-.aboriginal-freehold-land nav.subnav .aboriginal-freehold-land a,
+.aboriginal-and-torres-strait-islander-land nav.subnav .aboriginal-and-torres-strait-islander-land a,
 .leasehold-land nav.subnav .leasehold-land a,
 .crown-land nav.subnav .crown-land a,
 .pastoral-leases nav.subnav .pastoral-leases a,
+.mining-and-mineral-exploration-leases nav.subnav .mining-and-mineral-exploration-leases a,
 
 .land-councils nav.subnav .land-councils a,
 .northern-territory nav.subnav .northern-territory a,
+.queensland nav.subnav .queensland a,
+.western-australia nav.subnav .western-australia a,
 .nt nav.subnav .nt a,
+.qld nav.subnav .qld a,
+.wa nav.subnav .wa a,
 .tribunal nav.subnav .tribunal a,
 .key-terms nav.subnav .key-terms a
 
@@ -705,25 +845,26 @@ nav.subnav.toggled{
 
 .main nav.subnav .main a:after,
 
-.future-acts nav.subnav .future-acts a:after,
+.indigenous-land-use-agreements nav.subnav .indigenous-land-use-agreements a:after,
 .reserves nav.subnav .reserves a:after,
-.sacred-sites nav.subnav .sacred-sites a:after,
+.sacred-and-heritage-sites nav.subnav .sacred-and-heritage-sites a:after,
 
 .freehold-land nav.subnav .freehold-land a:after,
-.aboriginal-freehold-land nav.subnav .aboriginal-freehold-land a:after,
+.aboriginal-and-torres-strait-islander-land nav.subnav .aboriginal-and-torres-strait-islander-land a:after,
 .leasehold-land nav.subnav .leasehold-land a:after,
 .crown-land nav.subnav .crown-land a:after,
 .pastoral-leases nav.subnav .pastoral-leases a:after,
 .reserves nav.subnav .reserves a:after,
+.mining-and-mineral-exploration-leases nav.subnav .mining-and-mineral-exploration-leases a:after,
 
 .land-councils nav.subnav .land-councils a:after,
 .northern-territory nav.subnav .northern-territory a:after,
 .key-terms nav.subnav .key-terms a:after,
 
-.future-acts nav.subnav .future-acts a:after,
+.indigenous-land-use-agreements nav.subnav .indigenous-land-use-agreements a:after,
 .tribunal nav.subnav .tribunal a:after,
 .nt nav.subnav .nt a:after,
-.sacred-sites nav.subnav .sacred-sites a:after{
+.sacred-and-heritage-sites nav.subnav .sacred-and-heritage-sites a:after{
 	/* nothing here anymore but if we need to... */
 }
 
@@ -734,10 +875,13 @@ nav.subnav.toggled{
 footer{
 	padding: 30px 0 80px;
 	a{
-		color: #FFF;
+		color: #FFF !important;
 	}
 	a:visited{
-		color: #FFF;
+		color: #FFF !important;
+	}
+	a:hover{
+		color: #FFF !important;
 	}
 }
 
