@@ -56,103 +56,15 @@
             {% include nav-contact.html %}
             {% endif %}
 
-            {% if page.section != "tenure" %}
-            <div class="mv15 hidden-sm hidden-xs btn-side">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au" target="_blank"  class="btn-external">
-                <div class="circle">
-                </div>
-                <span>
-                  Explore northern Australia
-                </span>
-              </a>
-            </div>
-            {% endif %}
-
-            {% if page.title == "Freehold land" %}
-            <div class="mv15 hidden-sm hidden-xs btn-side ">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au/#freehold" target="_blank"  class="btn-external">
-                <div class="circle">
-                </div>
-                <span>
-                  Freehold land
-                </span>
-              </a>
-            </div>
-            {% endif %}
-
-            {% if page.title == "Aboriginal and Torres strait Islander Land" %}
-            <div class="mv15 hidden-sm hidden-xs btn-side ">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au/#freehold" target="_blank"  class="btn-external">
-                <div class="circle">
-                </div>
-                <span>
-                  Aboriginal and Torres strait Islander Land
-                </span>
-              </a>
-            </div>
-            {% endif %}
-
-            {% if page.title == "Crown land" %}
-            <div class="mv15 hidden-sm hidden-xs btn-side ">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au/#freehold" target="_blank"  class="btn-external">
-                <div class="circle">
-                </div>
-                <span>
-                  Crown land
-                </span>
-              </a>
-            </div>
-            {% endif %}
-
-            {% if page.title == "Pastoral leases" %}
-            <div class="mv15 hidden-sm hidden-xs btn-side ">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au/#freehold" target="_blank"  class="btn-external">
-                <div class="circle">
-                </div>
-                <span>
-                  Pastoral leases
-                </span>
-              </a>
-            </div>
-            {% endif %}
-
-            {% if page.title == "Reserves" %}
-            <div class="mv15 hidden-sm hidden-xs btn-side ">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au/#freehold" target="_blank"  class="btn-external">
-                <div class="circle">
-                </div>
-                <span>
-                  Reserves
-                </span>
-              </a>
-            </div>
-            {% endif %}
-
-            {% if page.title == "Leasehold land" %}
-            <div class="mv15 hidden-sm hidden-xs btn-side ">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au/#freehold" target="_blank"  class="btn-external">
-                <div class="circle">
-                </div>
-                <span>
-                  Leasehold land
-                </span>
-              </a>
-            </div>
-            {% endif %}
+            {% include nav-maps-links.html %}
 
           </div>
           <div class="col-sm-9">
             {{ content }}
             <div class="btn-top text-center"><a href='#top' class="">Scroll to top</a></div>
-            <div class="mv15 hidden-md hidden-lg">
-              <a href="http://northernaustralia.nationalmap.nicta.com.au" target="_blank" class="btn-external" style="width: 100%;">
-                <div class="circle">
-                </div>
-                <span>
-                  Explore northern Australia
-                </span>
-              </a>
-            </div>
+
+            {% include nav-maps-links-foot.html %}
+
           </div>
         </div>
       </div>
